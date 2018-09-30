@@ -1,9 +1,9 @@
+<!--<div [formGroup]="form">-->
 <div>
     <span>
         Select User:
-<select  class="form-control" (change)="onSelectAuthor($event.target.value)">
-   <option *ngFor="let author of authors$ | async" 
-       >{{author.name}}</option>
+<select  class="form-control" (change)="onSelectAuthor($event.target.value)"><!--[formControlName]="name">-->
+   <option *ngFor="let author of authors$ | async" [ngValue]="author.name">{{author.name}}</option>
 </select> 
     </span>
 </div>

@@ -2,7 +2,6 @@ import { Component, OnInit, Input, SimpleChanges, ChangeDetectionStrategy } from
 import { Blog } from 'app/shared/model/blog';
 import { Observable } from 'rxjs/Observable';
 
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Store } from '@ngrx/store';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/observable/from';
@@ -51,6 +50,4 @@ export class BlogSectionComponent implements OnInit {
   deleteBlog(blog: Blog) {
     this.store.dispatch({ type: 'DELETE_BLOG', payload: blog });
   }
-
-
 }
